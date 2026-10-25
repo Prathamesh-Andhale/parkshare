@@ -104,11 +104,22 @@ export default function Profile() {
             {siteData.team.map((member) => (
               <div 
                 key={member.id} 
-                className="bg-surface p-2 rounded-lg border border-slate-200 text-center"
+                className="bg-surface p-2 rounded-lg border border-slate-200 text-center flex flex-col items-center"
               >
-                <div className="text-[11px] font-bold text-navy">{member.name}</div>
-                <div className="text-[9px] font-mono text-teal font-semibold">ID: {member.id}</div>
-                <div className="text-[9px] text-slate-600 mt-0.5 font-medium">{member.role}</div>
+                {member.image ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${member.image}`}
+                    alt={member.name}
+                    className="w-10 h-10 rounded-full object-cover object-top mb-1 border border-white shadow-xs"
+                  />
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-navy text-white text-[10px] font-bold flex items-center justify-center mb-1">
+                    {member.initials}
+                  </div>
+                )}
+                <div className="text-[10px] font-bold text-navy leading-tight">{member.name}</div>
+                <div className="text-[8.5px] font-mono text-teal font-semibold">ID: {member.id}</div>
+                <div className="text-[8.5px] text-slate-600 mt-0.5 font-medium leading-tight">{member.role}</div>
               </div>
             ))}
           </div>

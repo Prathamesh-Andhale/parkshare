@@ -1,18 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ShieldCheck, GraduationCap } from 'lucide-react'
 
 export default function TeamCard({ member, className = "" }) {
+  const [imageError, setImageError] = useState(false)
+  const imageUrl = member.image ? `${import.meta.env.BASE_URL}${member.image}` : null
+
   return (
     <motion.div
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
       className={`bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center justify-between ${className}`}
     >
       <div className="w-full flex flex-col items-center">
-        {/* Avatar with initials */}
-        <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-navy to-navy-light text-white flex items-center justify-center text-xl font-bold tracking-wider shadow-inner mb-4 border-2 border-white ring-4 ring-teal/10">
-          {member.initials}
-        </div>
+        {/* Photo Avatar or Initials Fallback */}
+        {imageUrl && !imageError ? (
+          <div className="relative mb-4">
+            <img
+              src={imageUrl}
+              alt={member.name}
+              onError={() => setImageError(true)}
+              className="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-white ring-4 ring-teal/15 transition-transform hover:scale-105"
+            />
+            <span className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-full bg-teal text-white text-[10px] font-bold flex items-center justify-center border-2 border-white shadow">
+              {member.initials}
+            </span>
+          </div>
+        ) : (
+          <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-navy to-navy-light text-white flex items-center justify-center text-xl font-bold tracking-wider shadow-inner mb-4 border-2 border-white ring-4 ring-teal/10">
+            {member.initials}
+          </div>
+        )}
         
         {/* Name and ID */}
         <h3 className="text-lg font-bold text-navy">{member.name}</h3>

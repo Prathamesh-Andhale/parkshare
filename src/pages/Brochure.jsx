@@ -262,10 +262,21 @@ export default function Brochure() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
             {siteData.team.map((m) => (
-              <div key={m.id} className="bg-surface p-2 rounded-lg border border-slate-200">
-                <div className="text-[10px] font-bold text-navy">{m.name}</div>
+              <div key={m.id} className="bg-surface p-2 rounded-lg border border-slate-200 flex flex-col items-center">
+                {m.image ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${m.image}`}
+                    alt={m.name}
+                    className="w-10 h-10 rounded-full object-cover object-top mb-1 border border-white shadow-xs"
+                  />
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-navy text-white text-[10px] font-bold flex items-center justify-center mb-1">
+                    {m.initials}
+                  </div>
+                )}
+                <div className="text-[10px] font-bold text-navy leading-tight">{m.name}</div>
                 <div className="text-[8.5px] font-mono text-teal font-semibold">ID: {m.id}</div>
-                <div className="text-[8.5px] text-slate-600 mt-0.5">{m.role}</div>
+                <div className="text-[8.5px] text-slate-600 mt-0.5 leading-tight">{m.role}</div>
               </div>
             ))}
           </div>

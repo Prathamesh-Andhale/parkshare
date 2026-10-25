@@ -154,6 +154,7 @@ export const siteData = {
       id: "2025510002",
       role: "Team Lead & Full-stack Development",
       initials: "PA",
+      image: "team/prathamesh.jpg",
       bio: "F.Y. MCA student at SPIT focusing on system architecture, web platforms, and mobile-first application delivery.",
     },
     {
@@ -161,6 +162,7 @@ export const siteData = {
       id: "2025510007",
       role: "Product & Research",
       initials: "SB",
+      image: "team/swapnil.jpg",
       bio: "F.Y. MCA student at SPIT leading urban mobility market studies, pricing algorithms, and parking demand mapping.",
     },
     {
@@ -168,6 +170,7 @@ export const siteData = {
       id: "2025510008",
       role: "Design & Business Analysis",
       initials: "VB",
+      image: "team/vedant.jpg",
       bio: "F.Y. MCA student at SPIT shaping UI/UX design systems, user journey validation, and unit economics modelling.",
     },
     {
@@ -175,6 +178,7 @@ export const siteData = {
       id: "2025510064",
       role: "Operations & Documentation",
       initials: "DT",
+      image: "team/dev.jpg",
       bio: "F.Y. MCA student at SPIT directing regulatory compliance research, provider onboarding workflows, and operational safety.",
     }
   ],
