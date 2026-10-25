@@ -1,7 +1,7 @@
 # ParkShare · Share · Park · Go 🚗📍
 
 > **A smart, reservable peer-to-peer parking marketplace.**  
-> Academic startup project for the Entrepreneurship & IPR Course (Experiment 9: Venture Creation) by F.Y. MCA students at Sardar Patel Institute of Technology (SPIT), Munshi Nagar, Andheri (West), Mumbai 400058.
+> Academic startup project for the Entrepreneurship & IPR Course (Experiment 9: Venture Creation) by S.Y. MCA students at Sardar Patel Institute of Technology (SPIT), Munshi Nagar, Andheri (West), Mumbai 400058.
 
 ---
 

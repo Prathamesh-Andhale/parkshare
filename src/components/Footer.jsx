@@ -71,7 +71,7 @@ export default function Footer() {
                 <span>EIPR Exp 9: Venture</span>
               </div>
               <p>Sardar Patel Institute of Technology (SPIT), Andheri (W), Mumbai.</p>
-              <p className="text-[10px] text-slate-400">F.Y. MCA 2025–2026</p>
+              <p className="text-[10px] text-slate-400">S.Y. MCA 2025–2026</p>
             </div>
           </div>
 

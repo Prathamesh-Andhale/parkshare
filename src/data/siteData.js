@@ -12,7 +12,7 @@ export const siteData = {
     description: "A smart, reservable peer-to-peer parking marketplace connecting drivers with authorized unused private spaces across Greater Mumbai.",
     institution: "Sardar Patel Institute of Technology (SPIT)",
     campus: "Munshi Nagar, Andheri (West), Mumbai 400058",
-    academicContext: "Academic startup project of F.Y. MCA students for the Entrepreneurship and IPR course (Experiment 9: Venture Creation)",
+    academicContext: "Academic startup project of S.Y. MCA students for the Entrepreneurship and IPR course (Experiment 9: Venture Creation)",
     foundedYear: "2026",
     contactEmail: "prathamesh.andhale25@spit.ac.in",
     fullAddress: "Sardar Patel Institute of Technology, Munshi Nagar, Andheri (West), Mumbai - 400058",
@@ -155,7 +155,7 @@ export const siteData = {
       role: "Team Lead & Full-stack Development",
       initials: "PA",
       image: "team/prathamesh.jpg",
-      bio: "F.Y. MCA student at SPIT focusing on system architecture, web platforms, and mobile-first application delivery.",
+      bio: "S.Y. MCA student at SPIT focusing on system architecture, web platforms, and mobile-first application delivery.",
     },
     {
       name: "Swapnil Bhiungade",
@@ -163,7 +163,7 @@ export const siteData = {
       role: "Product & Research",
       initials: "SB",
       image: "team/swapnil.jpg",
-      bio: "F.Y. MCA student at SPIT leading urban mobility market studies, pricing algorithms, and parking demand mapping.",
+      bio: "S.Y. MCA student at SPIT leading urban mobility market studies, pricing algorithms, and parking demand mapping.",
     },
     {
       name: "Vedant Bhushette",
@@ -171,7 +171,7 @@ export const siteData = {
       role: "Design & Business Analysis",
       initials: "VB",
       image: "team/vedant.jpg",
-      bio: "F.Y. MCA student at SPIT shaping UI/UX design systems, user journey validation, and unit economics modelling.",
+      bio: "S.Y. MCA student at SPIT shaping UI/UX design systems, user journey validation, and unit economics modelling.",
     },
     {
       name: "Dev Tayade",
@@ -179,7 +179,7 @@ export const siteData = {
       role: "Operations & Documentation",
       initials: "DT",
       image: "team/dev.jpg",
-      bio: "F.Y. MCA student at SPIT directing regulatory compliance research, provider onboarding workflows, and operational safety.",
+      bio: "S.Y. MCA student at SPIT directing regulatory compliance research, provider onboarding workflows, and operational safety.",
     }
   ],
 
