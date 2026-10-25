@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Sharing Loop Arcs (Teal) -->
+  <!-- Top Arc with arrowhead at top-right -->
+  <path d="M 17 38 A 22 22 0 0 1 47 18" stroke="#00969B" stroke-width="3.5" stroke-linecap="round"/>
+  <polygon points="45,11 53,17 45,23" fill="#00969B"/>
+  
+  <!-- Bottom Arc with arrowhead at bottom-left -->
+  <path d="M 47 26 A 22 22 0 0 1 17 46" stroke="#00969B" stroke-width="3.5" stroke-linecap="round"/>
+  <polygon points="19,53 11,47 19,41" fill="#00969B"/>
+
+  <!-- Navy Map Pin -->
+  <path d="M 32 8 C 22.06 8 14 16.06 14 26 C 14 38.5 32 54 32 54 C 32 54 50 38.5 50 26 C 50 16.06 41.94 8 32 8 Z" fill="#12294A"/>
+  
+  <!-- White Inner Circle -->
+  <circle cx="32" cy="25" r="11" fill="#FFFFFF"/>
+  
+  <!-- Bold Navy 'P' -->
+  <text x="32" y="31" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="17" fill="#12294A" text-anchor="middle">P</text>
+</svg>
