@@ -22,7 +22,7 @@ export const siteData = {
   urls: {
     repoUrl: "https://github.com/Prathamesh-Andhale/parkshare",
     liveUrl: "https://Prathamesh-Andhale.github.io/parkshare/",
-    videoUrl: "", // Paste Google Drive share/preview link here (e.g., https://drive.google.com/file/d/FILE_ID/view)
+    videoUrl: "https://drive.google.com/file/d/1MriPcPFzoJ55iVBU-WASi0wOZQ9dtIRG/view?usp=sharing", 
     docs: {
       startupProfilePdf: "docs/StartupProfile.pdf",
       brochurePdf: "docs/Brochure.pdf",

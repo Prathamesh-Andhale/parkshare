@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
 import FeatureCard from '../components/FeatureCard'
+import VideoPlayer from '../components/VideoPlayer'
 import { siteData } from '../data/siteData'
 
 export default function Home() {
@@ -78,13 +79,20 @@ export default function Home() {
               <ArrowRight className="w-4 h-4" />
             </Link>
 
-            <Link
-              to="/video"
+            <a
+              href="#pitch-video"
+              onClick={(e) => {
+                const el = document.getElementById('pitch-video')
+                if (el) {
+                  e.preventDefault()
+                  el.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
               className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-navy font-bold text-sm border border-slate-200 shadow-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
             >
               <Play className="w-4 h-4 text-teal fill-teal" />
-              <span>Watch the Video</span>
-            </Link>
+              <span>Watch Pitch Video</span>
+            </a>
           </motion.div>
 
           {/* Micro Tagline Pill */}
@@ -112,6 +120,26 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* FEATURED PROMOTIONAL VIDEO SHOWCASE */}
+      <section id="pitch-video" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-28">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl overflow-hidden relative">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-bg text-teal border border-teal/20 text-xs font-semibold uppercase tracking-wider mb-3">
+              <Play className="w-3 h-3 fill-teal" />
+              <span>Promotional Pitch Video</span>
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">
+              Watch ParkShare in Action
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-muted">
+              A short, non-technical walkthrough showcasing how ParkShare connects Mumbai drivers with authorized private parking spots.
+            </p>
+          </div>
+
+          <VideoPlayer />
         </div>
       </section>
 
