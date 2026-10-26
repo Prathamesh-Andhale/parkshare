@@ -53,7 +53,7 @@ export default function TeamCard({ member, className = "" }) {
 
       <div className="w-full pt-4 mt-4 border-t border-slate-100 flex items-center justify-center text-[11px] text-muted gap-1">
         <ShieldCheck className="w-3.5 h-3.5 text-teal" />
-        <span>S.Y. MCA · SPIT Mumbai</span>
+        <span>S.Y. MCA (Batch 2026–2027) · SPIT Mumbai</span>
       </div>
     </motion.div>
   )

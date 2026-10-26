@@ -13,7 +13,7 @@ export default function About() {
         <SectionHeading
           badge="Founders & Vision"
           title="Building Smarter, Shared Mobility for Urban India"
-          subtitle="ParkShare was founded in 2026 by S.Y. MCA students at Sardar Patel Institute of Technology (SPIT), Andheri, Mumbai, as part of the Entrepreneurship and IPR Venture Creation curriculum."
+          subtitle="ParkShare was founded in 2026 by S.Y. MCA students (Batch 2026–2027) at Sardar Patel Institute of Technology (SPIT), Andheri, Mumbai, as part of the Entrepreneurship and IPR Venture Creation curriculum."
         />
       </section>
 
@@ -78,7 +78,7 @@ export default function About() {
         <SectionHeading
           badge="Executive Team"
           title="Meet the Founders"
-          subtitle="Master of Computer Applications (MCA) Batch 2025–2026, Sardar Patel Institute of Technology, Mumbai."
+          subtitle="Master of Computer Applications (MCA) Batch 2026–2027, Sardar Patel Institute of Technology, Mumbai."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -69,7 +69,7 @@ export default function Contact() {
                 <span className="text-xs font-bold uppercase tracking-wider text-teal">Academic Startup</span>
                 <h3 className="text-xl font-bold text-navy mt-1">ParkShare Operations</h3>
                 <p className="text-xs text-muted mt-2 leading-relaxed">
-                  Project under the Entrepreneurship and IPR course (Experiment 9: Venture Creation) by S.Y. MCA students.
+                  Project under the Entrepreneurship and IPR course (Experiment 9: Venture Creation) by S.Y. MCA students (Batch 2026–2027).
                 </p>
               </div>
 

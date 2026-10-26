@@ -257,7 +257,7 @@ export default function Brochure() {
         <div className="mb-4">
           <div className="text-[10px] font-bold text-navy uppercase tracking-wider mb-2 flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-teal" />
-            <span>Founding Team (S.Y. MCA, SPIT Mumbai)</span>
+            <span>Founding Team (S.Y. MCA Batch 2026–2027, SPIT Mumbai)</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
