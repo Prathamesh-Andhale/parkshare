@@ -22,11 +22,31 @@ export const siteData = {
   urls: {
     repoUrl: "https://github.com/Prathamesh-Andhale/parkshare",
     liveUrl: "https://Prathamesh-Andhale.github.io/parkshare/",
-    videoUrl: "https://drive.google.com/file/d/1MriPcPFzoJ55iVBU-WASi0wOZQ9dtIRG/view?usp=sharing", 
+    videoUrl: "https://drive.google.com/file/d/1WSm27BjROzhVjdEYbVxMBVWi_IECl1lo/view?usp=sharing", // Primary full explainer
+    teaserUrl: "https://drive.google.com/file/d/1MriPcPFzoJ55iVBU-WASi0wOZQ9dtIRG/view?usp=sharing", // 30-sec concept teaser
+    explainerUrl: "https://drive.google.com/file/d/1WSm27BjROzhVjdEYbVxMBVWi_IECl1lo/view?usp=sharing", // Full explainer
     docs: {
       startupProfilePdf: "docs/StartupProfile.pdf",
       brochurePdf: "docs/Brochure.pdf",
       bmcPdf: "docs/BMC.pdf",
+    }
+  },
+
+  // Videos configuration
+  videos: {
+    teaser: {
+      title: "ParkShare Concept Teaser",
+      subtitle: "A quick 30-second teaser showcasing the peer-to-peer parking solution for Mumbai commuters.",
+      url: "https://drive.google.com/file/d/1MriPcPFzoJ55iVBU-WASi0wOZQ9dtIRG/view?usp=sharing",
+      badge: "Concept Teaser",
+      duration: "0:30 min"
+    },
+    explainer: {
+      title: "Making Parking Easy for Urban India",
+      subtitle: "Comprehensive product explainer and walkthrough of the ParkShare peer-to-peer parking ecosystem.",
+      url: "https://drive.google.com/file/d/1WSm27BjROzhVjdEYbVxMBVWi_IECl1lo/view?usp=sharing",
+      badge: "Full Product Explainer",
+      duration: "Walkthrough"
     }
   },
 

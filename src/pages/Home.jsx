@@ -123,23 +123,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURED PROMOTIONAL VIDEO SHOWCASE */}
+      {/* FEATURED PROMOTIONAL VIDEO SHOWCASE (CONCEPT TEASER) */}
       <section id="pitch-video" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-28">
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl overflow-hidden relative">
           <div className="text-center max-w-2xl mx-auto mb-6">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-bg text-teal border border-teal/20 text-xs font-semibold uppercase tracking-wider mb-3">
               <Play className="w-3 h-3 fill-teal" />
-              <span>Promotional Pitch Video</span>
+              <span>Venture Concept Teaser</span>
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">
               Watch ParkShare in Action
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-muted">
-              A short, non-technical walkthrough showcasing how ParkShare connects Mumbai drivers with authorized private parking spots.
+              A quick concept teaser showing how ParkShare transforms idle Mumbai parking spots into a smart, reservable marketplace.
             </p>
           </div>
 
-          <VideoPlayer />
+          <VideoPlayer 
+            url={siteData.urls.teaserUrl} 
+            title="ParkShare Concept Teaser"
+            label="ParkShare 30-Sec Concept Teaser"
+          />
+
+          {/* Callout to Full Explainer */}
+          <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50/80 -mx-6 -mb-6 sm:-mx-10 sm:-mb-10 p-6 sm:px-10">
+            <div>
+              <h4 className="text-sm font-bold text-navy">Need the complete product walkthrough?</h4>
+              <p className="text-xs text-muted mt-0.5">Explore our in-depth video detailing the end-to-end mobile app workflow and unit economics.</p>
+            </div>
+            <Link
+              to="/video"
+              className="px-5 py-2.5 rounded-xl bg-teal hover:bg-teal-dark text-white text-xs font-semibold flex items-center gap-2 transition-all shadow-sm flex-shrink-0"
+            >
+              <span>Watch Full Explainer Video</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
 

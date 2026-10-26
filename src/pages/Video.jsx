@@ -1,24 +1,84 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SectionHeading from '../components/SectionHeading'
 import VideoPlayer from '../components/VideoPlayer'
+import { siteData } from '../data/siteData'
+import { Film, Sparkles, CheckCircle2, Play } from 'lucide-react'
 
 export default function Video() {
+  const [selectedVideo, setSelectedVideo] = useState('explainer')
+
+  const currentVideoData = selectedVideo === 'explainer' 
+    ? siteData.videos.explainer 
+    : siteData.videos.teaser
+
   return (
     <div className="space-y-16 pb-20">
       
       {/* HEADER SECTION */}
       <section className="pt-12 sm:pt-16 pb-4 text-center max-w-4xl mx-auto px-4">
         <SectionHeading
-          badge="Pitch Deck & Demo"
-          title="ParkShare Promotional Video"
-          subtitle="A short, non-technical promotional video showcasing our peer-to-peer parking solution for Greater Mumbai commuters."
+          badge="Pitch Deck & Demos"
+          title="ParkShare Video Showcase"
+          subtitle="Explore our venture pitch media created for Experiment 9: Venture Creation under SPIT Mumbai's Entrepreneurship & IPR course."
         />
+
+        {/* Video Switcher Tabs */}
+        <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 shadow-inner">
+          <button
+            onClick={() => setSelectedVideo('explainer')}
+            className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all ${
+              selectedVideo === 'explainer'
+                ? 'bg-white text-navy shadow-sm'
+                : 'text-muted hover:text-navy'
+            }`}
+          >
+            <Film className="w-4 h-4 text-teal" />
+            <span>Full Product Explainer</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-teal-bg text-teal">
+              Walkthrough
+            </span>
+          </button>
+
+          <button
+            onClick={() => setSelectedVideo('teaser')}
+            className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all ${
+              selectedVideo === 'teaser'
+                ? 'bg-white text-navy shadow-sm'
+                : 'text-muted hover:text-navy'
+            }`}
+          >
+            <Sparkles className="w-4 h-4 text-teal" />
+            <span>Concept Teaser</span>
+            <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">
+              30 Sec
+            </span>
+          </button>
+        </div>
       </section>
 
       {/* VIDEO CONTAINER */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-xl overflow-hidden">
-          <VideoPlayer />
+        <div className="bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-xl overflow-hidden space-y-4">
+          <div className="px-2 pt-2 flex items-center justify-between">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-teal">
+                {currentVideoData.badge}
+              </span>
+              <h3 className="text-lg font-bold text-navy mt-0.5">
+                {currentVideoData.title}
+              </h3>
+              <p className="text-xs text-muted mt-0.5">
+                {currentVideoData.subtitle}
+              </p>
+            </div>
+          </div>
+
+          <VideoPlayer
+            key={selectedVideo}
+            url={currentVideoData.url}
+            title={currentVideoData.title}
+            label={currentVideoData.badge}
+          />
         </div>
       </section>
 

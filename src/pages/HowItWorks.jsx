@@ -2,6 +2,7 @@ import React from 'react'
 import SectionHeading from '../components/SectionHeading'
 import Timeline from '../components/Timeline'
 import PhoneDemo from '../components/PhoneDemo'
+import VideoPlayer from '../components/VideoPlayer'
 import { siteData } from '../data/siteData'
 import { ShieldCheck, PlusCircle, Calendar, Banknote, CheckCircle2 } from 'lucide-react'
 
@@ -21,6 +22,25 @@ export default function HowItWorks() {
       {/* 7-STEP TIMELINE */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Timeline steps={siteData.howItWorksSteps} />
+      </section>
+
+      {/* VIDEO WALKTHROUGH SECTION */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-xl overflow-hidden">
+          <SectionHeading
+            badge="Full Video Walkthrough"
+            title="Watch ParkShare in Action Across Urban India"
+            subtitle="Follow the step-by-step workflow: discovering nearby authorized inventory, escrow security hold, navigation reveal, and verified checkout."
+          />
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <VideoPlayer
+              url={siteData.urls.explainerUrl}
+              title="ParkShare: Making Parking Easy for Urban India"
+              label="Full Product Walkthrough · Urban India Parking Solution"
+            />
+          </div>
+        </div>
       </section>
 
       {/* INTERACTIVE PROTOTYPE DEMO SECTION */}

@@ -64,7 +64,7 @@ export function parseVideoUrl(url) {
   }
 }
 
-export default function VideoPlayer({ url, className = "" }) {
+export default function VideoPlayer({ url, title, label, className = "" }) {
   const targetUrl = url || siteData.urls.videoUrl || ""
   const videoInfo = parseVideoUrl(targetUrl)
 
@@ -80,7 +80,7 @@ export default function VideoPlayer({ url, className = "" }) {
             Promotional Video Coming Soon
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Our pitch video is currently being recorded. You can paste the video link into <code className="bg-white/10 px-1.5 py-0.5 rounded text-teal-light font-mono text-xs">src/data/siteData.js</code> to view it live here.
+            Our pitch video is currently being finalized. Once recorded, you can paste the video link into <code className="bg-white/10 px-1.5 py-0.5 rounded text-teal-light font-mono text-xs">src/data/siteData.js</code> to view it live here.
           </p>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function VideoPlayer({ url, className = "" }) {
         ) : (
           <iframe
             src={videoInfo.embedUrl}
-            title="ParkShare Promotional Video"
+            title={title || "ParkShare Video"}
             className="w-full h-full border-0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -121,7 +121,7 @@ export default function VideoPlayer({ url, className = "" }) {
           </span>
           <Film className="w-4 h-4 text-teal" />
           <span className="font-medium text-navy/80">
-            {videoInfo.type === 'drive' ? 'Google Drive Stream' : videoInfo.type === 'youtube' ? 'YouTube Stream' : 'Video Player'} · SPIT MCA Academic Pitch
+            {label || (videoInfo.type === 'drive' ? 'Google Drive Stream' : videoInfo.type === 'youtube' ? 'YouTube Stream' : 'Video Player')} · SPIT Mumbai Venture Creation
           </span>
         </div>
 
